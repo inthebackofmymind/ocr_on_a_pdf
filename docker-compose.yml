@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  ocr:
+    build: .
+    command: >
+       /files/convert_script /files/example.pdf 
+    volumes:
+      - '.:/files'

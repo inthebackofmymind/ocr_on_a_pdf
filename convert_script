@@ -1,0 +1,5 @@
+#!/bin/bash
+
+convert -density 300 $1 -depth 8 -strip -background white -alpha off ./out.tiff
+tesseract ./out.tiff eng
+rm ./out.tiff
