@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+import re
+from collections import Counter
+
+inFile = 'eng.txt'
+outFile = 'word_frequency.txt'
+
+book = []
+with open(inFile, mode="r") as f:
+    x = f.read()
+    book = Counter(re.split(r"\W+", x.lower()))
+
+common = book.most_common()
+
+with open(outFile, mode='w') as f:
+    y = str(common).replace('),', '\n').replace('(','').replace('[','').replace(']','').replace('\'','').replace(' ','').replace(')','')
+    f.write(str(y))

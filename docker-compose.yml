@@ -4,6 +4,6 @@ services:
   ocr:
     build: .
     command: >
-       /files/convert_script /files/example.pdf 
+       /files/convert_script example.pdf
     volumes:
       - '.:/files'

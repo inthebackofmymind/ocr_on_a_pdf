@@ -8,6 +8,6 @@ WORKDIR $INSTALL_PATH
 
 COPY . .
 
-RUN apt-get -y update && apt-get -y install imagemagick tesseract-ocr
+RUN apt-get -y update && apt-get -y install imagemagick tesseract-ocr python
 
-CMD ["$INSTALL_PATH/convert_script", "example.pdf"] 
+CMD ["$INSTALL_PATH/convert_script", "example.pdf"]
